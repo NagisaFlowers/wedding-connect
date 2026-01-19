@@ -1,0 +1,145 @@
+/* Estilos específicos para admin.php */
+.admin-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0 100px;
+    margin-top: 76px;
+}
+
+.admin-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.admin-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.admin-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.credentials-card {
+    border-left: 4px solid var(--primary-color);
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.credentials-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.input-group-text {
+    border-right: none;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.25);
+    border-color: var(--primary-color);
+}
+
+#togglePassword {
+    border-left: none;
+}
+
+#togglePassword:hover {
+    background-color: #e9ecef;
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
+
+.btn-outline-secondary {
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* Animación para errores */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Loading state */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Security indicator */
+.security-level {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.security-level h6 {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.security-level p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-card {
+        padding: 30px 20px;
+    }
+    
+    .admin-hero {
+        padding: 120px 0 80px;
+    }
+    
+    .credentials-card .row {
+        flex-direction: column;
+    }
+}
