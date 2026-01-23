@@ -1,0 +1,419 @@
+/* Estilos específicos para admin.php - Tema Bodas Elegante con Great Vibes */
+
+/* Hero Section para Admin */
+.admin-hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.489)), 
+                url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+    color: var(--color-gris-oscuro);
+    padding: 200px 0 150px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 76px;
+}
+
+.admin-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(232, 196, 161, 0.03) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,20 C60,20 70,25 70,35 C70,45 60,50 50,50 C40,50 30,45 30,35 C30,25 40,20 50,20 Z' fill='none' stroke='%23d4af37' stroke-width='0.3' stroke-opacity='0.1'/%3E%3C/svg%3E");
+    animation: float 25s linear infinite;
+}
+
+.admin-hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: var(--color-oro-oscuro);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.admin-hero .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* Sección de Admin */
+.admin-section {
+    padding: 80px 0;
+    background-color: var(--color-blanco-hueso);
+    position: relative;
+}
+
+.admin-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro), 
+                transparent);
+}
+
+/* Tarjeta de admin elegante */
+.admin-card {
+    background: var(--color-blanco);
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    padding: 50px;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    z-index: 1;
+    transition: var(--transicion);
+}
+
+.admin-card:hover {
+    box-shadow: var(--sombra-media);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.admin-icon {
+    font-size: 4rem;
+    color: var(--color-oro);
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+    text-shadow: 0 3px 6px rgba(212, 175, 55, 0.2);
+}
+
+/* Formulario de login elegante */
+#loginForm .form-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.8rem;
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+#loginForm .form-label i {
+    color: var(--color-oro);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Input groups elegantes */
+.input-group {
+    border-radius: var(--borde-redondeado);
+    overflow: hidden;
+}
+
+.input-group .input-group-text {
+    background-color: var(--color-blanco);
+    border: var(--borde-fino);
+    border-right: none;
+    color: var(--color-oro);
+    font-size: 1.2rem;
+    padding: 14px 18px;
+}
+
+.input-group .form-control {
+    border: var(--borde-fino);
+    border-left: none;
+    border-radius: 0 var(--borde-redondeado) var(--borde-redondeado) 0;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris-oscuro);
+    background-color: var(--color-blanco-hueso);
+    transition: var(--transicion);
+}
+
+.input-group .form-control:focus {
+    border-color: var(--color-oro);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    background-color: var(--color-blanco);
+    outline: none;
+}
+
+.input-group .form-control::placeholder {
+    color: var(--color-gris);
+    font-weight: 300;
+}
+
+/* Botón para mostrar contraseña */
+#togglePassword {
+    border: var(--borde-fino);
+    border-left: none;
+    border-radius: 0 var(--borde-redondeado) var(--borde-redondeado) 0;
+    background-color: var(--color-blanco);
+    color: var(--color-oro);
+    padding: 14px 20px;
+    transition: var(--transicion);
+}
+
+#togglePassword:hover {
+    background-color: var(--color-oro-claro);
+    color: var(--color-oro-oscuro);
+}
+
+#togglePassword i {
+    font-size: 1.2rem;
+}
+
+/* Botón de login */
+#submitBtn {
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-oscuro));
+    border: none;
+    border-radius: var(--borde-redondeado);
+    padding: 16px 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+#submitBtn:hover {
+    background: linear-gradient(135deg, var(--color-oro-oscuro), var(--color-oro));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Tarjeta de credenciales */
+.credentials-card {
+    background: var(--color-blanco-hueso);
+    border: var(--borde-fino);
+    border-left: 4px solid var(--color-oro);
+    border-radius: var(--borde-redondeado);
+    padding: 25px;
+    margin-top: 2rem;
+    transition: var(--transicion);
+}
+
+.credentials-card:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: var(--sombra-suave);
+}
+
+.credentials-card .card-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: var(--color-oro-oscuro);
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.credentials-card .card-title i {
+    color: var(--color-oro);
+    margin-right: 10px;
+}
+
+.credentials-card p {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.credentials-card p strong {
+    color: var(--color-oro-oscuro);
+    font-weight: 600;
+}
+
+.credentials-card .text-muted {
+    color: var(--color-gris) !important;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.credentials-card .text-muted i {
+    color: var(--color-oro);
+    margin-right: 5px;
+}
+
+/* Alertas elegantes */
+.alert {
+    border: none;
+    border-radius: var(--borde-redondeado);
+    padding: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(253, 126, 20, 0.1));
+    border-left: 4px solid #dc3545;
+    color: #dc3545;
+}
+
+.alert i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-close {
+    filter: brightness(0) invert(0.3);
+}
+
+/* Botón volver */
+.btn-outline-secondary {
+    border: 2px solid var(--color-oro);
+    color: var(--color-oro);
+    background: transparent;
+    border-radius: var(--borde-redondeado);
+    padding: 12px 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: var(--transicion);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-oro);
+    color: var(--color-blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+/* Animación para errores */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Loading state */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--color-blanco);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Security indicator */
+.security-level {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--color-blanco-hueso);
+    border-radius: var(--borde-redondeado);
+    border-left: 4px solid var(--color-oro);
+    transition: var(--transicion);
+}
+
+.security-level:hover {
+    box-shadow: var(--sombra-suave);
+}
+
+.security-level h6 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--color-oro-oscuro);
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.security-level p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: var(--color-gris);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .admin-hero h1 { font-size: 4rem; }
+    .admin-card { padding: 40px; }
+}
+
+@media (max-width: 992px) {
+    .admin-hero {
+        padding: 150px 0 100px;
+        background-attachment: scroll;
+    }
+    
+    .admin-hero h1 { font-size: 3.5rem; }
+    .admin-hero .lead { font-size: 1.3rem; }
+    .admin-card { padding: 35px 30px; }
+    #submitBtn { padding: 14px 30px; }
+}
+
+@media (max-width: 768px) {
+    .admin-hero {
+        padding: 120px 0 80px;
+    }
+    
+    .admin-hero h1 { font-size: 2.8rem; }
+    .admin-hero .lead { font-size: 1.2rem; }
+    .admin-section { padding: 60px 0; }
+    .admin-card { padding: 30px 20px; }
+    .input-group .form-control, 
+    .input-group .input-group-text, 
+    #togglePassword { padding: 12px 15px; }
+    .credentials-card { padding: 20px; }
+}
+
+@media (max-width: 576px) {
+    .admin-hero h1 { font-size: 2.3rem; }
+    .admin-card { padding: 25px 20px; }
+    #submitBtn, .btn-outline-secondary { 
+        padding: 12px 25px; 
+        font-size: 1.1rem;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .credentials-card .card-title { font-size: 1.6rem; }
+}
+
+/* Botón Admin - Sin fondo azul por defecto */
+.nav-link.btn-outline-primary {
+    background-color: transparent !important;
+    border-color: #0d6efd !important;
+    color: #0d6efd !important;
+}
+
+/* Botón Admin al pasar el cursor - Mantener sin fondo azul */
+.nav-link.btn-outline-primary:hover {
+    background-color: transparent !important;
+    border-color: #0b5ed7 !important;
+    color: #0b5ed7 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(11, 94, 215, 0.2);
+}

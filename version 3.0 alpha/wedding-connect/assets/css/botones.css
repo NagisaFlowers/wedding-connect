@@ -1,0 +1,58 @@
+/* ESTILOS PARA BOTONES FUNCIONALES */
+.btn-panel {
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-panel:active {
+    transform: translateY(0);
+}
+
+.btn-panel-nuevo {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.btn-panel-exportar {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+}
+
+.btn-panel-imprimir {
+    background: linear-gradient(135deg, #17a2b8, #0dcaf0);
+    color: white;
+}
+
+.btn-panel i {
+    margin-right: 5px;
+}
+
+/* ANIMACIÓN PARA RIPPLE EFFECT */
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ANIMACIÓN PARA NOTIFICACIONES */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

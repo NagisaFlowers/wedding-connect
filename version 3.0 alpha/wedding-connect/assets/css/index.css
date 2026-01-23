@@ -1,0 +1,553 @@
+/* Estilos específicos para index.php - Tema Bodas Elegante con Great Vibes */
+
+/* Hero Section elegante con cursiva */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.489)), 
+                url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+    color: var(--color-gris-oscuro);
+    padding: 200px 0 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(232, 196, 161, 0.03) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,20 C60,20 70,25 70,35 C70,45 60,50 50,50 C40,50 30,45 30,35 C30,25 40,20 50,20 Z' fill='none' stroke='%23d4af37' stroke-width='0.3' stroke-opacity='0.1'/%3E%3Cpath d='M20,70 C30,70 40,75 40,85 C40,95 30,100 20,100 C10,100 0,95 0,85 C0,75 10,70 20,70 Z' fill='none' stroke='%23d4af37' stroke-width='0.3' stroke-opacity='0.1'/%3E%3Cpath d='M80,70 C90,70 100,75 100,85 C100,95 90,100 80,100 C70,100 60,95 60,85 C60,75 70,70 80,70 Z' fill='none' stroke='%23d4af37' stroke-width='0.3' stroke-opacity='0.1'/%3E%3C/svg%3E");
+    animation: float 25s linear infinite;
+}
+
+.hero-section h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: 400;
+    color: var(--color-oro-oscuro);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro), 
+                var(--color-oro-rosa), 
+                var(--color-oro), 
+                transparent);
+}
+
+.hero-section .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+
+
+.hero-section .btn-outline-light {
+    border: 2px solid var(--color-blanco);
+    color: var(--color-blanco);
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-oro);
+    color: var(--color-oro-claro);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero ornament */
+.hero-ornament {
+    text-align: center;
+    margin: 3rem 0;
+    color: var(--color-oro);
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+}
+
+.hero-ornament i {
+    opacity: 0.6;
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-ornament i:nth-child(1) { animation-delay: 0s; }
+.hero-ornament i:nth-child(2) { animation-delay: 0.3s; }
+.hero-ornament i:nth-child(3) { animation-delay: 0.6s; }
+
+/* Tarjetas de servicio elegantes con cursiva */
+.service-card {
+    background: var(--color-blanco);
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    overflow: hidden;
+    transition: var(--transicion);
+    height: 100%;
+    position: relative;
+    padding: 2.5rem;
+}
+
+.service-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: var(--sombra-media);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--color-oro);
+    border-radius: var(--borde-redondeado);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover::after {
+    opacity: 0.3;
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    color: var(--color-oro);
+    margin-bottom: 2rem;
+    transition: var(--transicion);
+    display: inline-block;
+    text-shadow: 0 3px 6px rgba(212, 175, 55, 0.2);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.3) rotate(15deg);
+    color: var(--color-oro-oscuro);
+    text-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.service-card h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.3rem;
+    color: var(--color-oro-oscuro);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1.2px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.service-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-oro), transparent);
+    transition: width 0.5s ease;
+}
+
+.service-card:hover h4::after {
+    width: 100px;
+}
+
+.service-card p {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.service-card ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.service-card ul li {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris);
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.service-card ul li i {
+    color: var(--color-oro);
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover ul li i {
+    transform: scale(1.2);
+    color: var(--color-oro-oscuro);
+}
+
+/* Galería elegante */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+    height: 280px;
+}
+
+.gallery-item img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(0, 0, 0, 0.7) 50%, 
+                transparent 100%);
+    color: var(--color-blanco);
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h5 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    color: var(--color-oro-claro);
+}
+
+.gallery-overlay small {
+    font-family: 'Cormorant Garamond', serif;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Carrusel elegante */
+.carousel-indicators button {
+    background-color: var(--color-oro) !important;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0 10px !important;
+    opacity: 0.4;
+    transition: var(--transicion);
+    border: 2px solid transparent;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+    transform: scale(1.4);
+    border: 2px solid var(--color-blanco);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-oro);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: var(--transicion);
+    border: 2px solid var(--color-blanco);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.6);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    width: 25px;
+    height: 25px;
+}
+
+.carousel-item h3 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--color-oro-oscuro);
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.carousel-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-oro), var(--color-oro-rosa));
+}
+
+.carousel-inner {
+    padding-bottom: 3rem;
+}
+
+/* CTA Section elegante */
+.cta-section {
+    background: linear-gradient(135deg, var(--color-blanco-hueso), var(--color-beige));
+    color: var(--color-gris-oscuro);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(232, 196, 161, 0.05) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,20 C60,20 70,25 70,35 C70,45 60,50 50,50 C40,50 30,45 30,35 C30,25 40,20 50,20 Z' fill='none' stroke='%23d4af37' stroke-width='0.2' stroke-opacity='0.08'/%3E%3C/svg%3E");
+}
+
+.cta-section h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: var(--color-oro-oscuro);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2.5px;
+}
+
+.cta-section .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--color-gris);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.cta-section .btn-light {
+    background-color: var(--color-blanco);
+    border: 2px solid var(--color-oro);
+    color: var(--color-oro-oscuro);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section .btn-light:hover {
+    background-color: var(--color-oro-claro);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25);
+    letter-spacing: 1.8px;
+}
+
+.cta-section .btn-light i {
+    color: var(--color-oro);
+    transition: transform 0.3s ease;
+}
+
+.cta-section .btn-light:hover i {
+    transform: scale(1.2);
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajustes específicos para el índice */
+#servicios {
+    background-color: var(--color-blanco);
+    padding: 100px 0;
+    position: relative;
+}
+
+#servicios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro), 
+                transparent);
+}
+
+#galeria {
+    padding: 100px 0;
+    background-color: var(--color-blanco-hueso);
+    position: relative;
+}
+
+#galeria::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro-rosa), 
+                var(--color-oro), 
+                var(--color-oro-rosa), 
+                transparent);
+}
+
+/* Efectos de scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive específico */
+@media (max-width: 1200px) {
+    .hero-section h1 { font-size: 4.2rem; }
+    .cta-section h2 { font-size: 3.5rem; }
+    .service-card h4 { font-size: 2rem; }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 150px 0 100px;
+        background-attachment: scroll;
+    }
+    
+    .hero-section h1 { 
+        font-size: 3.5rem; 
+        letter-spacing: 2px;
+    }
+    
+    .hero-section .lead { font-size: 1.3rem; }
+    .cta-section h2 { font-size: 3rem; }
+    .service-icon { font-size: 3rem; }
+    .service-card h4 { font-size: 1.8rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 120px 0 80px;
+    }
+    
+    .hero-section h1 { 
+        font-size: 2.8rem; 
+        letter-spacing: 1.5px;
+    }
+    
+    .hero-section .lead { font-size: 1.2rem; }
+    .cta-section { padding: 80px 0; }
+    .cta-section h2 { font-size: 2.5rem; }
+    .section-title { font-size: 3rem; }
+    .gallery-item { height: 220px; }
+    .carousel-item h3 { font-size: 2.5rem; }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 { 
+        font-size: 2.3rem; 
+        letter-spacing: 1px;
+    }
+    
+    .hero-ornament { 
+        font-size: 1.8rem; 
+        letter-spacing: 5px;
+    }
+    
+    .service-card { padding: 1.5rem; }
+    .service-icon { font-size: 2.5rem; }
+    .service-card h4 { font-size: 1.6rem; }
+    .cta-section h2 { font-size: 2.2rem; }
+    .btn-lg { padding: 14px 30px; }
+}
+
+/* Animación para elementos al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .service-card, .gallery-item, .carousel-item {
+        animation: fadeIn 1s ease-out;
+    }
+}
+
+/* Quitar fondo azul del botón Admin al pasar el cursor */
+.nav-link.btn-outline-primary:hover {
+    background-color: transparent !important;
+    border-color: #0d6efd !important;
+    color: #0d6efd !important;
+}

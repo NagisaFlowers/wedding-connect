@@ -1,0 +1,724 @@
+/* panel.css - ESTILOS PARA EL PANEL CON TEMA WEDDING ELEGANTE */
+
+/* Variables del tema Wedding */
+:root {
+    --color-oro: #d4af37;
+    --color-oro-oscuro: #b8941f;
+    --color-oro-claro: #f4e4a6;
+    --color-oro-rosa: #e8c4a1;
+    --color-blanco: #ffffff;
+    --color-blanco-hueso: #faf8f5;
+    --color-beige: #f5f1e8;
+    --color-gris: #8a8a8a;
+    --color-gris-oscuro: #333333;
+    --color-blanco-transparente: rgba(255, 255, 255, 0.95);
+    --borde-fino: 1px solid rgba(212, 175, 55, 0.15);
+    --borde-redondeado: 12px;
+    --sombra-suave: 0 5px 20px rgba(0, 0, 0, 0.05);
+    --sombra-media: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estructura Principal con tema Wedding */
+.admin-body {
+    background: linear-gradient(135deg, var(--color-blanco-hueso), var(--color-beige));
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris-oscuro);
+    padding-top: 80px;
+}
+
+/* Navbar Elegante con tema Wedding */
+.navbar-admin {
+    background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.98), 
+                rgba(255, 255, 255, 0.95));
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.1);
+    box-shadow: 0 3px 15px rgba(212, 175, 55, 0.08);
+    padding: 1.2rem 0;
+}
+
+.navbar-admin .navbar-brand {
+    color: var(--color-oro-oscuro) !important;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-admin .navbar-brand i {
+    color: var(--color-oro);
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+
+.navbar-admin .badge {
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-oscuro));
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+/* Mensaje de bienvenida elegante */
+.welcome-text {
+    color: var(--color-gris-oscuro);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-text i {
+    margin-right: 8px;
+    color: var(--color-oro);
+}
+
+/* Tarjetas de Estadísticas Elegantes */
+.stat-card {
+    background: var(--color-blanco);
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    padding: 35px 25px;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+    border-left: 4px solid var(--color-oro);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-media);
+    border-color: var(--color-oro-rosa);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro), 
+                var(--color-oro-rosa), 
+                transparent);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    color: var(--color-oro);
+    margin-bottom: 20px;
+    text-shadow: 0 3px 6px rgba(212, 175, 55, 0.2);
+}
+
+.stat-number {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--color-oro-oscuro);
+    line-height: 1;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.stat-label {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contenedores de Tablas Elegantes */
+.table-container {
+    background: var(--color-blanco);
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    padding: 30px;
+    margin-top: 30px;
+    transition: var(--transicion);
+}
+
+.table-container:hover {
+    box-shadow: var(--sombra-media);
+}
+
+.table-container h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--color-oro-oscuro);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.table-container h5 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--color-oro-oscuro);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Tablas Elegantes */
+#clientesTable,
+#clientesDashboard,
+#eventosTable {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#clientesTable thead,
+#clientesDashboard thead,
+#eventosTable thead {
+    background: linear-gradient(135deg, var(--color-oro-claro), var(--color-oro-rosa));
+    color: var(--color-oro-oscuro);
+}
+
+#clientesTable thead th,
+#clientesDashboard thead th,
+#eventosTable thead th {
+    border: none;
+    padding: 18px 15px;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+#clientesTable tbody tr,
+#clientesDashboard tbody tr,
+#eventosTable tbody tr {
+    transition: var(--transicion);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+#clientesTable tbody tr:hover,
+#clientesDashboard tbody tr:hover,
+#eventosTable tbody tr:hover {
+    background-color: rgba(212, 175, 55, 0.05);
+    transform: translateX(5px);
+}
+
+#clientesTable tbody td,
+#clientesDashboard tbody td,
+#eventosTable tbody td {
+    padding: 15px;
+    vertical-align: middle;
+    font-size: 1.1rem;
+    color: var(--color-gris-oscuro);
+}
+
+/* Badges Elegantes para Tipos de Evento */
+.badge-boda_civil,
+.badge-boda_religiosa,
+.badge-boda_destino,
+.badge-boda_intima,
+.badge-boda_lujo,
+.badge-boda_tematica,
+.badge-boda_playa,
+.badge-boda_campo,
+.badge-boda_urbana,
+.badge-boda_vintage {
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-oscuro));
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.2);
+}
+
+/* Colores específicos para diferentes tipos de eventos */
+.badge-xv_anos,
+.badge-xv_anos_tematica,
+.badge-xv_anos_lujo,
+.badge-xv_anos_intima {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+.badge-baby_shower,
+.badge-baby_shower_gender_reveal,
+.badge-baby_shower_tematica {
+    background: linear-gradient(135deg, #7afcff, #4fc3f7);
+}
+
+.badge-evento_empresarial,
+.badge-convencion,
+.badge-lanzamiento_producto,
+.badge-conferencia,
+.badge-seminario,
+.badge-team_building,
+.badge-fiesta_navidad_empresa {
+    background: linear-gradient(135deg, #8a2be2, #9370db);
+}
+
+.badge-evento_municipal,
+.badge-feria_local,
+.badge-festival_cultural,
+.badge-concierto_publico,
+.badge-celebracion_aniversario_ciudad,
+.badge-evento_deportivo_municipal {
+    background: linear-gradient(135deg, #32cd32, #00fa9a);
+}
+
+.badge-cumpleanos,
+.badge-aniversario,
+.badge-graduacion,
+.badge-bautizo,
+.badge-primera_comunion,
+.badge-despedida_soltero,
+.badge-fiesta_compromiso,
+.badge-renovacion_votos,
+.badge-fiesta_halloween,
+.badge-fiesta_navidad,
+.badge-fiesta_ano_nuevo,
+.badge-fiesta_pascua {
+    background: linear-gradient(135deg, #ffa726, #ff9800);
+}
+
+.badge-evento_religioso,
+.badge-evento_benefico,
+.badge-evento_gala,
+.badge-evento_privado {
+    background: linear-gradient(135deg, #9c27b0, #673ab7);
+}
+
+/* Sidebar Elegante */
+.admin-sidebar {
+    background: var(--color-blanco);
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-suave);
+    padding: 25px 0;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    overflow: hidden;
+}
+
+.admin-sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro), 
+                var(--color-oro-rosa), 
+                transparent);
+}
+
+.admin-sidebar .text-center {
+    padding: 0 20px;
+}
+
+.admin-sidebar .text-center i {
+    font-size: 3.5rem;
+    color: var(--color-oro);
+    margin-bottom: 15px;
+    text-shadow: 0 3px 6px rgba(212, 175, 55, 0.2);
+}
+
+.admin-sidebar h5 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--color-oro-oscuro);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.admin-sidebar p {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris);
+    font-size: 1rem;
+}
+
+/* Navegación del Sidebar */
+.nav-link {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris-oscuro);
+    padding: 14px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-left: 3px solid transparent;
+    transition: var(--transicion);
+    margin: 2px 0;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.08), 
+                rgba(232, 196, 161, 0.08));
+    color: var(--color-oro-oscuro);
+    border-left: 3px solid var(--color-oro);
+    padding-left: 30px;
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, 
+                rgba(212, 175, 55, 0.15), 
+                rgba(232, 196, 161, 0.15));
+    color: var(--color-oro-oscuro);
+    border-left: 3px solid var(--color-oro);
+    font-weight: 600;
+}
+
+.nav-link i {
+    color: var(--color-oro);
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Área de reloj y estadísticas */
+.admin-sidebar .mt-4 {
+    padding: 0 20px;
+}
+
+.admin-sidebar small {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris);
+    font-size: 0.9rem;
+}
+
+#currentDateTime {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-oro-oscuro);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* Modales Elegantes */
+.modal-content {
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--color-blanco-hueso), var(--color-beige));
+    border-bottom: var(--borde-fino);
+    padding: 25px 30px;
+}
+
+.modal-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    color: var(--color-oro-oscuro);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.modal-title i {
+    color: var(--color-oro);
+    margin-right: 10px;
+}
+
+.modal-body {
+    padding: 30px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.modal-body .form-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--color-oro-oscuro);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.modal-body .form-control,
+.modal-body .form-select {
+    border: var(--borde-fino);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--color-gris-oscuro);
+    background-color: var(--color-blanco-hueso);
+    transition: var(--transicion);
+}
+
+.modal-body .form-control:focus,
+.modal-body .form-select:focus {
+    border-color: var(--color-oro);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    background-color: var(--color-blanco);
+}
+
+/* Botones Elegantes */
+.btn {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: var(--transicion);
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-oscuro));
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-oro-oscuro), var(--color-oro));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    border: none;
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f44336, #c62828);
+    border: none;
+    color: white;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #2196f3, #1565c0);
+    border: none;
+    color: white;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ff9800, #ef6c00);
+    border: none;
+    color: white;
+}
+
+/* Grupo de botones */
+.btn-group .btn {
+    border-radius: 6px;
+    margin-right: 5px;
+    padding: 8px 15px;
+    font-size: 0.95rem;
+}
+
+.btn-group .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Área de búsqueda */
+.search-box {
+    max-width: 400px;
+}
+
+.search-box .input-group {
+    border: var(--borde-fino);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.search-box .form-control {
+    border: none;
+    padding: 12px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    background: var(--color-blanco);
+}
+
+.search-box .form-control:focus {
+    box-shadow: none;
+}
+
+.search-box .btn {
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-oscuro));
+    border: none;
+    padding: 12px 25px;
+}
+
+/* Alertas Elegantes */
+.alert-panel {
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+}
+
+.alert-panel-success {
+    background: linear-gradient(135deg, 
+                rgba(76, 175, 80, 0.1), 
+                rgba(46, 125, 50, 0.1));
+    border-left: 4px solid #4caf50;
+    color: #2e7d32;
+}
+
+.alert-panel-info {
+    background: linear-gradient(135deg, 
+                rgba(33, 150, 243, 0.1), 
+                rgba(21, 101, 192, 0.1));
+    border-left: 4px solid #2196f3;
+    color: #1565c0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Títulos Principales */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--color-oro-oscuro);
+    font-weight: 400;
+}
+
+h1.h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.text-muted {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris) !important;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .stat-number { font-size: 2.5rem; }
+    .table-container h4 { font-size: 2.2rem; }
+}
+
+@media (max-width: 992px) {
+    .navbar-admin .navbar-brand { font-size: 1.8rem; }
+    .stat-card { padding: 25px 20px; }
+    .admin-sidebar { position: static; margin-bottom: 30px; }
+}
+
+@media (max-width: 768px) {
+    .admin-body { padding-top: 70px; }
+    h1.h3 { font-size: 2.2rem; }
+    .stat-card { padding: 20px 15px; }
+    .stat-icon { font-size: 2.5rem; }
+    .stat-number { font-size: 2rem; }
+    .table-container { padding: 20px; }
+    .search-box { max-width: 100%; }
+    .btn { padding: 8px 20px; font-size: 1rem; }
+}
+
+@media (max-width: 576px) {
+    .navbar-admin .navbar-brand { font-size: 1.5rem; }
+    .welcome-text { display: none; }
+    .stat-card { padding: 15px 10px; }
+    .stat-number { font-size: 1.8rem; }
+    .stat-label { font-size: 0.9rem; }
+    .table-container h4 { font-size: 1.8rem; }
+    .modal-body { padding: 20px; }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-blanco-hueso);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-rosa));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--color-oro-oscuro), var(--color-oro));
+}
+
+/* Fondo decorativo */
+.admin-body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(232, 196, 161, 0.02) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,20 C60,20 70,25 70,35 C70,45 60,50 50,50 C40,50 30,45 30,35 C30,25 40,20 50,20 Z' fill='none' stroke='%23d4af37' stroke-width='0.2' stroke-opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: -1;
+}
+/* Estilos específicos para fechas en tarjetas del dashboard - Como index.php */
+.stat-card .stat-number {
+    font-family: 'Cormorant Garamond', serif !important; /* Cambiar a Cormorant Garamond */
+    font-size: 1.8rem !important; /* Tamaño más pequeño */
+    font-weight: 400 !important;
+    letter-spacing: 0.5px !important;
+    color: var(--color-oro-oscuro) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 5px !important;
+}
+
+/* Estilos para fechas específicamente (evitar afectar números) */
+.stat-card .stat-number.fecha-style {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--color-gris-oscuro);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Asegurar que las etiquetas también tengan estilo consistente */
+.stat-card .stat-label {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: var(--color-gris) !important;
+    margin-top: 5px !important;
+}
+
+/* Ajustar icono de fecha para que combine */
+.stat-card .stat-icon.text-warning {
+    color: var(--color-oro-rosa) !important;
+}

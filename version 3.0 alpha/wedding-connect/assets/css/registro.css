@@ -1,0 +1,360 @@
+/* Estilos específicos para registro.php - Tema Bodas Elegante con Great Vibes */
+
+/* Hero Section para Registro */
+.registro-hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.489)), 
+                url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+    color: var(--color-gris-oscuro);
+    padding: 200px 0 150px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 76px;
+}
+
+.registro-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(232, 196, 161, 0.03) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50,20 C60,20 70,25 70,35 C70,45 60,50 50,50 C40,50 30,45 30,35 C30,25 40,20 50,20 Z' fill='none' stroke='%23d4af37' stroke-width='0.3' stroke-opacity='0.1'/%3E%3C/svg%3E");
+    animation: float 25s linear infinite;
+}
+
+.registro-hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: var(--color-oro-oscuro);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.registro-hero .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* Sección de Registro */
+.registro-section {
+    padding: 80px 0;
+    background-color: var(--color-blanco-hueso);
+    position: relative;
+}
+
+.registro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro), 
+                transparent);
+}
+
+/* Tarjeta de registro elegante */
+.registro-card {
+    background: var(--color-blanco);
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    padding: 50px;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    z-index: 1;
+    transition: var(--transicion);
+}
+
+.registro-card:hover {
+    box-shadow: var(--sombra-media);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.registro-icon {
+    font-size: 4rem;
+    color: var(--color-oro);
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+    text-shadow: 0 3px 6px rgba(212, 175, 55, 0.2);
+}
+
+/* Formulario elegante */
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.8rem;
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.form-label i {
+    color: var(--color-oro);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.form-control, .form-select {
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris-oscuro);
+    background-color: var(--color-blanco-hueso);
+    transition: var(--transicion);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-oro);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    background-color: var(--color-blanco);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: var(--color-gris);
+    font-weight: 300;
+}
+
+textarea.form-control {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+/* Select con optgroups elegante */
+.form-select optgroup {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-oro-oscuro);
+}
+
+.form-select option {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    padding: 10px;
+    color: var(--color-gris-oscuro);
+}
+
+/* Botones de formulario */
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-oscuro));
+    border: none;
+    border-radius: var(--borde-redondeado);
+    padding: 16px 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-oro-oscuro), var(--color-oro));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline-secondary {
+    border: 2px solid var(--color-oro);
+    color: var(--color-oro);
+    background: transparent;
+    border-radius: var(--borde-redondeado);
+    padding: 16px 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: var(--transicion);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-oro);
+    color: var(--color-blanco);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+/* Info steps elegantes */
+.info-step {
+    background: var(--color-blanco);
+    border: var(--borde-fino);
+    border-radius: var(--borde-redondeado);
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-step:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-media);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+.info-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-oro), var(--color-oro-rosa));
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-oro), var(--color-oro-oscuro));
+    color: var(--color-blanco);
+    border-radius: 50%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.info-step h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: var(--color-oro-oscuro);
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.info-step p {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--color-gris);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Alertas elegantes */
+.alert {
+    border: none;
+    border-radius: var(--borde-redondeado);
+    padding: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.1));
+    border-left: 4px solid #28a745;
+    color: #28a745;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(253, 126, 20, 0.1));
+    border-left: 4px solid #dc3545;
+    color: #dc3545;
+}
+
+.alert i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-close {
+    filter: brightness(0) invert(0.3);
+}
+
+/* Sección de información */
+.info-section {
+    padding: 80px 0;
+    background-color: var(--color-blanco);
+    position: relative;
+}
+
+.info-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+                transparent, 
+                var(--color-oro-rosa), 
+                var(--color-oro), 
+                var(--color-oro-rosa), 
+                transparent);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .registro-hero h1 { font-size: 4rem; }
+    .registro-card { padding: 40px; }
+}
+
+@media (max-width: 992px) {
+    .registro-hero {
+        padding: 150px 0 100px;
+        background-attachment: scroll;
+    }
+    
+    .registro-hero h1 { font-size: 3.5rem; }
+    .registro-hero .lead { font-size: 1.3rem; }
+    .registro-card { padding: 35px 30px; }
+    .btn-primary, .btn-outline-secondary { padding: 14px 30px; }
+}
+
+@media (max-width: 768px) {
+    .registro-hero {
+        padding: 120px 0 80px;
+    }
+    
+    .registro-hero h1 { font-size: 2.8rem; }
+    .registro-hero .lead { font-size: 1.2rem; }
+    .registro-section, .info-section { padding: 60px 0; }
+    .registro-card { padding: 30px 20px; }
+    .form-control, .form-select { padding: 12px 15px; }
+    .step-number { width: 50px; height: 50px; font-size: 1.8rem; }
+}
+
+@media (max-width: 576px) {
+    .registro-hero h1 { font-size: 2.3rem; }
+    .registro-card { padding: 25px 20px; }
+    .btn-primary, .btn-outline-secondary { 
+        padding: 12px 25px; 
+        font-size: 1.1rem;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form-label { font-size: 1rem; }
+    .info-step h4 { font-size: 1.6rem; }
+}

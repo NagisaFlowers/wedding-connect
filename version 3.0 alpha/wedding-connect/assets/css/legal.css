@@ -1,0 +1,215 @@
+/* Estilos para páginas legales (privacidad y términos) */
+
+/* Hero Sections */
+.privacy-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 150px 0 100px;
+    margin-top: 76px;
+    text-align: center;
+}
+
+.terms-hero {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    padding: 150px 0 100px;
+    margin-top: 76px;
+    text-align: center;
+}
+
+.legal-badge {
+    background: linear-gradient(135deg, #0d6efd, #198754);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Contenido legal */
+.legal-content {
+    background-color: #f8f9fa;
+}
+
+.law-summary {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    border-left: 5px solid #198754;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+    color: #666;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color: white;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-color);
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+/* Acordeón personalizado */
+.accordion-button {
+    font-weight: 600;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.125);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: rgba(233, 30, 99, 0.1);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(233, 30, 99, 0.25);
+}
+
+/* Letras ARCO */
+.arco-letter {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 10px;
+}
+
+/* Tablas */
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+.table-bordered {
+    border-color: #dee2e6;
+}
+
+/* Cartas de sección */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e9ecef;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Alertas personalizadas */
+.alert {
+    border: none;
+    border-radius: 10px;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.alert-info {
+    background-color: #cff4fc;
+    color: #055160;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+.alert-primary {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .privacy-hero,
+    .terms-hero {
+        padding: 120px 0 80px;
+    }
+    
+    .legal-badge {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .arco-letter {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card, .accordion-item, .alert {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Botón de ver ley */
+#view-law-btn {
+    border-width: 2px;
+    font-weight: 500;
+}
+
+#view-law-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Iconos grandes */
+.display-5 {
+    font-size: 2.5rem;
+}
+
+.display-4 {
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+}
+
+/* Scroll suave para anclas */
+html {
+    scroll-behavior: smooth;
+}
