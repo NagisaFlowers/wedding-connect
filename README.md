@@ -1,7 +1,7 @@
-para version 1.0 >> se desarrollo un prototipo del cual se ira adaptando (no lleva una clean architecture) la base de datos es sencilla
+para version 1.0 proto >> se desarrollo un prototipo del cual se ira adaptando (no lleva una clean architecture) la base de datos es sencilla
 
 
-para version 2.0 >> se unifican mision y vision en nosotros y se añaden carrusel de imagenes y distintos eventos en formulario, la base de datos se modifica
+para version 2.0 unixproto >> se unifican mision y vision en nosotros y se añaden carrusel de imagenes y distintos eventos en formulario, la base de datos se modifica
 
 
 para version 3.0 alpha >> se hace una clean architecture se dan estilos y funcionalidades en el dashboard , uso de crud implementado en panel panel.php(mucho codigo)
