@@ -1,0 +1,80 @@
+/* Estilos específicos para vision.php */
+.vision-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0 100px;
+    margin-top: 76px;
+}
+
+.vision-section {
+    padding: 80px 0;
+    background: var(--light-color);
+}
+
+.vision-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+}
+
+.vision-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.goals-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.goal-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    background: var(--light-color);
+    height: 100%;
+    transition: transform 0.3s;
+    border-left: 4px solid var(--primary-color);
+}
+
+.goal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
+}
+
+.goal-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.goal-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.vision-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.vision-text p {
+    margin-bottom: 1.5rem;
+}
