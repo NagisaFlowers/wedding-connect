@@ -4,7 +4,7 @@ para version 1.0 proto >> se desarrollo un prototipo del cual se ira adaptando (
 para version 2.0 unixproto >> se unifican mision y vision en nosotros y se añaden carrusel de imagenes y distintos eventos en formulario, la base de datos se modifica
 
 
-para version 3.0 alpha >> se hace una clean architecture se dan estilos y funcionalidades en el dashboard , uso de crud implementado en panel panel.php(mucho codigo)
+para version 3.0 alpha >> se hace una clean architecture se dan estilos y funcionalidades en el dashboard , uso de crud implementado en panel panel.php(mucho codigo), se agregaron politica de privacidad y terminos 
 
 
 para version 4.0 beta >> se cambia visualmente el login y se añaden funciones al dashboard y se aplica clean arquitecture al panel.php (distribucion de codigo)

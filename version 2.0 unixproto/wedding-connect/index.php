@@ -37,16 +37,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mision.php">
-                            <i class="bi bi-bullseye"></i> Misión
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="vision.php">
-                            <i class="bi bi-eye"></i> Visión
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="registro.php">
                             <i class="bi bi-calendar-plus"></i> Registro
                         </a>

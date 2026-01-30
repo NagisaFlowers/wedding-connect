@@ -132,6 +132,76 @@ $titulo = "Nosotros - Wedding Connect";
             font-size: 1.1rem;
             opacity: 0.9;
         }
+        
+        /* Nuevos estilos para Misión y Visión */
+        .mission-vision-section {
+            padding: 80px 0;
+            background: white;
+        }
+        .mv-card {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 40px 30px;
+            height: 100%;
+            border-top: 5px solid #e91e63;
+            transition: all 0.3s ease;
+        }
+        .mv-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(233, 30, 99, 0.15);
+        }
+        .mv-icon {
+            font-size: 3.5rem;
+            color: #e91e63;
+            margin-bottom: 1.5rem;
+        }
+        .mv-title {
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .mv-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            text-align: justify;
+        }
+        .goals-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        .goal-card {
+            text-align: center;
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+            height: 100%;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-bottom: 3px solid #e91e63;
+        }
+        .goal-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.1);
+        }
+        .goal-icon {
+            font-size: 2rem;
+            color: #e91e63;
+            margin-bottom: 1rem;
+        }
+        .goal-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #e91e63;
+            color: white;
+            border-radius: 50%;
+            line-height: 35px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -156,16 +226,6 @@ $titulo = "Nosotros - Wedding Connect";
                     <li class="nav-item">
                         <a class="nav-link active" href="nosotros.php">
                             <i class="bi bi-people"></i> Nosotros
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mision.php">
-                            <i class="bi bi-bullseye"></i> Misión
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="vision.php">
-                            <i class="bi bi-eye"></i> Visión
                         </a>
                     </li>
                     <li class="nav-item">
@@ -239,6 +299,127 @@ $titulo = "Nosotros - Wedding Connect";
                 <div class="col-md-3 mb-4">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Satisfacción del Cliente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Nuestra Esencia</h2>
+                    <p class="lead text-muted">Los pilares fundamentales que definen quiénes somos y hacia dónde vamos</p>
+                </div>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="mv-card">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-bullseye mv-icon"></i>
+                            <h3 class="mv-title">Nuestra Misión</h3>
+                        </div>
+                        <div class="mv-text">
+                            <p class="mb-4">Nuestra misión es hacer que su día sea especial y tenga todo lo que siempre soñaron, ¡y todo sin preocupaciones! Materializar la visión única de cada cliente, diseñando y ejecutando experiencias excepcionales en los ámbitos social, corporativo y gubernamental.</p>
+                            <p class="mb-4">Nos comprometemos a superar expectativas a través de una planificación meticulosa, una logística impecable y un servicio apasionado, donde cada detalle es cuidado con excelencia.</p>
+                            <p class="mb-0">Convertimos sueños en realidad, celebraciones en recuerdos imperecederos y objetivos corporativos en eventos estratégicos de alto impacto.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="mv-card">
+                        <div class="text-center mb-4">
+                            <i class="bi bi-eye mv-icon"></i>
+                            <h3 class="mv-title">Nuestra Visión</h3>
+                        </div>
+                        <div class="mv-text">
+                            <p class="mb-4">Ser el referente indiscutible y líder en la industria de la planificación de eventos, ser reconocidos por nuestra innovación constante, nuestra adherencia al más alto protocolo y nuestra capacidad infalible para crear experiencias emocionalmente resonantes y operativamente perfectas.</p>
+                            <p class="mb-0">Aspiramos a ser la primera opción para quienes buscan excelencia, confianza y un partner creativo que eleve cualquier celebración o acto institucional a su máxima expresión.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metas Estratégicas -->
+    <section class="goals-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Nuestras Metas Estratégicas</h2>
+                    <p class="lead text-muted">Los objetivos que nos guían hacia nuestro futuro ideal</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="goal-card">
+                        <div class="goal-number">1</div>
+                        <div class="goal-icon">
+                            <i class="bi bi-trophy-fill"></i>
+                        </div>
+                        <h5>Liderazgo en Innovación</h5>
+                        <p class="small">Ser pioneros en tendencias y tecnologías para eventos, estableciendo nuevos estándares en la industria.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="goal-card">
+                        <div class="goal-number">2</div>
+                        <div class="goal-icon">
+                            <i class="bi bi-hearts"></i>
+                        </div>
+                        <h5>Experiencias Únicas</h5>
+                        <p class="small">Crear momentos emocionalmente impactantes que trasciendan en la memoria de nuestros clientes.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="goal-card">
+                        <div class="goal-number">3</div>
+                        <div class="goal-icon">
+                            <i class="bi bi-globe-americas"></i>
+                        </div>
+                        <h5>Expansión Nacional</h5>
+                        <p class="small">Establecer presencia en las principales ciudades del país como sinónimo de excelencia en planificación.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="goal-card">
+                        <div class="goal-number">4</div>
+                        <div class="goal-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h5>Formación de Expertos</h5>
+                        <p class="small">Desarrollar el talento humano más capacitado y apasionado de la industria de eventos.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="goal-card">
+                        <div class="goal-number">5</div>
+                        <div class="goal-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5>Confianza Absoluta</h5>
+                        <p class="small">Ser la primera opción por excelencia para quienes buscan seguridad y profesionalismo en sus eventos.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="goal-card">
+                        <div class="goal-number">6</div>
+                        <div class="goal-icon">
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <h5>Excelencia Sostenida</h5>
+                        <p class="small">Mantener los más altos estándares de calidad en cada proyecto, grande o pequeño.</p>
+                    </div>
                 </div>
             </div>
         </div>
