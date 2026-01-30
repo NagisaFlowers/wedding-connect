@@ -424,7 +424,7 @@ if (isset($_GET['buscar']) && !empty($_GET['buscar'])) {
                 <div class="mt-4 text-center text-muted">
                     <small>
                         <i class="bi bi-c-circle"></i> <?php echo date('Y'); ?> Wedding Connect 
-                        | Panel Administrativo v1.0
+                        | Panel Administrativo v2.0
                         | <span id="currentDateTime"></span>
                     </small>
                 </div>

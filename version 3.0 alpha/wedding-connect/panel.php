@@ -1082,7 +1082,7 @@ function formatearTipoEvento($tipo_boda) {
                 <div class="mt-4 text-center text-muted">
                     <small>
                         <i class="bi bi-c-circle"></i> <?php echo date('Y'); ?> Wedding Connect 
-                        | Panel Administrativo v1.0
+                        | Panel Administrativo v3.0
                         | <span id="currentDateTime"></span>
                     </small>
                 </div>
