@@ -10,6 +10,7 @@ para version 3.0 alpha >> se hace una clean architecture se dan estilos y funcio
 para version 4.0 beta >> se cambia visualmente el login y se añaden funciones al dashboard y se aplica clean arquitecture al panel.php (distribucion de codigo)
 
 
+======================================================================================================================================================================================================
 para version 5.0 delta >> en desarrollo tratar de normalizar la base de datos y ver que mas se puede hacer a peticion de cristina gallo
 
 
