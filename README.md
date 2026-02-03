@@ -10,8 +10,4 @@ para version 3.0 alpha >> se hace una clean architecture se dan estilos y funcio
 para version 4.0 beta >> se cambia visualmente el login y se añaden funciones al dashboard y se aplica clean arquitecture al panel.php (distribucion de codigo)
 
 
-========================================================================================================================================================================================
-para version 5.0 delta >> en desarrollo tratar de normalizar la base de datos y ver que mas se puede hacer a peticion de cristina gallo
-
-
-para version 6.0 omega >> proyecto terminado y aprobado con todas las funcionalidades que cristina requirió
+para version 5.0 delta >> se normalizó la base de datos y se hizo un scheme de bdd , se agregaron imagenes al carrusel conforme a fotos de cristina, se hicieron responsivos los botones solo queda saber que cambios requerira cristina 
