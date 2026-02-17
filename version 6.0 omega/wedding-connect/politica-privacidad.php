@@ -374,6 +374,9 @@ $titulo = "Política de Privacidad - Wedding Connect";
                         <a href="https://www.linkedin.com/in/mar%C3%ADa-cristina-gallo-medina-020328191/?originalSubdomain=mx" class="social-icon bg-primary">
                             <i class="bi bi-linkedin"></i>
                         </a>
+                        <a href="https://api.whatsapp.com/send/?phone=524497698371&text&type=phone_number&app_absent=0" class="social-icon bg-success">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -387,7 +390,7 @@ $titulo = "Política de Privacidad - Wedding Connect";
                         </li>
                         <li class="mb-3">
                             <i class="bi bi-telephone me-2"></i>
-                            +52 1 449 769 8371
+                            449 769 8371
                         </li>
                         <li class="mb-3">
                             <i class="bi bi-envelope me-2"></i>

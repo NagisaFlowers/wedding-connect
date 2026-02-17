@@ -594,6 +594,9 @@
                         <a href="https://www.linkedin.com/in/mar%C3%ADa-cristina-gallo-medina-020328191/?originalSubdomain=mx" class="social-icon bg-primary">
                             <i class="bi bi-linkedin"></i>
                         </a>
+                        <a href="https://api.whatsapp.com/send/?phone=524497698371&text&type=phone_number&app_absent=0" class="social-icon bg-success">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 

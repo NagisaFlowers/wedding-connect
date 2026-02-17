@@ -103,7 +103,8 @@ $titulo = "Nosotros - Wedding Connect";
                                     <div class="about-text">
                                         <p class="mb-4">Cristina Gallo Event Planner se remonta a la organización de pequeñas celebraciones en entornos íntimos como casas y jardines, donde desde un inicio se forjó una sólida reputación basada en la atención al detalle y la creatividad.</p>
                                         <p class="mb-4">Este enfoque meticuloso, sumado a una apasionada dedicación por hacer de cada evento —especialmente cada boda— una experiencia única, generó un crecimiento orgánico impulsado por la recomendación boca a boca entre los clientes satisfechos.</p>
-                                        <p class="mb-0">Con una ejecución demostrable de más de 70 eventos anuales y un historial de éxito en cada uno de ellos, la constante innovación y el compromiso inquebrantable con la satisfacción del cliente han posicionado a la empresa como un líder y referente en el sector de la planificación de eventos.</p>
+                                        <p class="mb-4">Con una ejecución demostrable de más de 70 eventos anuales y un historial de éxito en cada uno de ellos, la constante innovación y el compromiso inquebrantable con la satisfacción del cliente han posicionado a la empresa como un líder y referente en el sector de la planificación de eventos.</p>
+                                        <p class="mb-0">Nuestra área de servicio es Aguascalientes, México • Jalisco, México • Aguascalientes Centro, Aguascalientes, México • Zacatecas, México.</p>
                                     </div>
                                 </div>
                             </div>
@@ -319,6 +320,9 @@ $titulo = "Nosotros - Wedding Connect";
                         <a href="https://www.linkedin.com/in/mar%C3%ADa-cristina-gallo-medina-020328191/?originalSubdomain=mx" class="social-icon bg-primary">
                             <i class="bi bi-linkedin"></i>
                         </a>
+                        <a href="https://api.whatsapp.com/send/?phone=524497698371&text&type=phone_number&app_absent=0" class="social-icon bg-success">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -332,7 +336,7 @@ $titulo = "Nosotros - Wedding Connect";
                         </li>
                         <li class="mb-3">
                             <i class="bi bi-telephone me-2"></i>
-                            +52 1 449 769 8371
+                            449 769 8371
                         </li>
                         <li class="mb-3">
                             <i class="bi bi-envelope me-2"></i>

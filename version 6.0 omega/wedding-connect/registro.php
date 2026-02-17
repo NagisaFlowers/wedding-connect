@@ -2,6 +2,17 @@
 // Incluir configuración de base de datos centralizada
 require_once 'config/database.php';
 
+// Función para generar clave a partir del nombre del evento (para autocompletado JS)
+function generarClave($nombre) {
+    $clave = strtolower($nombre);
+    $clave = str_replace(
+        ['á', 'é', 'í', 'ó', 'ú', 'ñ', 'ü', ' ', '-'],
+        ['a', 'e', 'i', 'o', 'u', 'n', 'u', '_', '_'],
+        $clave
+    );
+    return preg_replace('/[^a-z_]/', '', $clave); // elimina cualquier otro carácter
+}
+
 // Inicializar variables
 $message = '';
 $message_type = '';
@@ -10,12 +21,12 @@ $registro_exitoso = false;
 
 // Procesar formulario si se envió
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nombre = $_POST['nombre'] ?? '';
-    $correo = $_POST['correo'] ?? '';
-    $telefono = $_POST['telefono'] ?? '';
+    $nombre = trim($_POST['nombre'] ?? '');
+    $correo = trim($_POST['correo'] ?? '');
+    $telefono = trim($_POST['telefono'] ?? '');
     $fecha_evento = $_POST['fecha_evento'] ?? '';
-    $tipo_evento_id = $_POST['tipo_evento_id'] ?? ''; // Cambiado a tipo_evento_id
-    $mensaje = $_POST['mensaje'] ?? '';
+    $tipo_evento_id = $_POST['tipo_evento_id'] ?? '';
+    $mensaje = trim($_POST['mensaje'] ?? '');
     
     $form_data = [
         'nombre' => $nombre,
@@ -31,41 +42,83 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message = 'Por favor complete todos los campos requeridos';
         $message_type = 'error';
     } else {
-        try {
-            // Usar conexión centralizada
-            $db = getDB();
-            
-            // Preparar consulta con referencia a tipos_evento
-            $sql = "INSERT INTO clientes (nombre, correo, telefono, fecha_evento, tipo_evento_id, mensaje, fecha_registro) 
-                    VALUES (:nombre, :correo, :telefono, :fecha_evento, :tipo_evento_id, :mensaje, NOW())";
-            
-            $stmt = $db->prepare($sql);
-            $stmt->execute([
-                ':nombre' => $nombre,
-                ':correo' => $correo,
-                ':telefono' => $telefono,
-                ':fecha_evento' => $fecha_evento,
-                ':tipo_evento_id' => $tipo_evento_id,
-                ':mensaje' => $mensaje
-            ]);
-            
-            $message = '¡Registro exitoso! Te contactaremos pronto.';
-            $message_type = 'success';
-            $registro_exitoso = true;
-            
-            // Limpiar datos del formulario
-            $form_data = [
-                'nombre' => '',
-                'correo' => '',
-                'telefono' => '',
-                'fecha_evento' => '',
-                'tipo_evento_id' => '',
-                'mensaje' => ''
-            ];
-            
-        } catch (PDOException $e) {
-            $message = 'Error al guardar el registro: ' . $e->getMessage();
+        $errores = [];
+        
+        // Validar nombre: solo letras y espacios, máximo 30 caracteres
+        if (!preg_match('/^[a-zA-ZáéíóúñÑüÜ\s]+$/', $nombre)) {
+            $errores[] = 'El nombre solo puede contener letras y espacios.';
+        } elseif (strlen($nombre) > 30) {
+            $errores[] = 'El nombre no puede exceder los 30 caracteres.';
+        }
+        
+        // Validar correo: formato y máximo 50 caracteres
+        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            $errores[] = 'El correo electrónico no es válido.';
+        } elseif (strlen($correo) > 50) {
+            $errores[] = 'El correo no puede exceder los 50 caracteres.';
+        }
+        
+        // Validar teléfono: exactamente 10 dígitos
+        $telefono_limpio = preg_replace('/\D/', '', $telefono);
+        if (!preg_match('/^\d{10}$/', $telefono_limpio)) {
+            $errores[] = 'El teléfono debe contener exactamente 10 dígitos numéricos.';
+        }
+        
+        // Validar fecha: no puede ser pasada
+        $hoy = new DateTime('today');
+        $fecha = DateTime::createFromFormat('Y-m-d', $fecha_evento);
+        if (!$fecha || $fecha < $hoy) {
+            $errores[] = 'La fecha del evento debe ser hoy o en el futuro.';
+        }
+        
+        // Validar mensaje: máximo 500 palabras (opcional)
+        if (!empty($mensaje)) {
+            $num_palabras = str_word_count($mensaje, 0, 'áéíóúñüÁÉÍÓÚÑÜ');
+            if ($num_palabras > 500) {
+                $errores[] = 'El mensaje no puede exceder las 500 palabras.';
+            }
+        }
+        
+        if (!empty($errores)) {
+            $message = implode('<br>', $errores);
             $message_type = 'error';
+        } else {
+            try {
+                // Usar conexión centralizada
+                $db = getDB();
+                
+                // Preparar consulta
+                $sql = "INSERT INTO clientes (nombre, correo, telefono, fecha_evento, tipo_evento_id, mensaje, fecha_registro) 
+                        VALUES (:nombre, :correo, :telefono, :fecha_evento, :tipo_evento_id, :mensaje, NOW())";
+                
+                $stmt = $db->prepare($sql);
+                $stmt->execute([
+                    ':nombre' => $nombre,
+                    ':correo' => $correo,
+                    ':telefono' => $telefono_limpio, // guardamos solo dígitos
+                    ':fecha_evento' => $fecha_evento,
+                    ':tipo_evento_id' => $tipo_evento_id,
+                    ':mensaje' => $mensaje
+                ]);
+                
+                $message = '¡Registro exitoso! Te contactaremos pronto.';
+                $message_type = 'success';
+                $registro_exitoso = true;
+                
+                // Limpiar datos del formulario
+                $form_data = [
+                    'nombre' => '',
+                    'correo' => '',
+                    'telefono' => '',
+                    'fecha_evento' => '',
+                    'tipo_evento_id' => '',
+                    'mensaje' => ''
+                ];
+                
+            } catch (PDOException $e) {
+                $message = 'Error al guardar el registro: ' . $e->getMessage();
+                $message_type = 'error';
+            }
         }
     }
 }
@@ -182,7 +235,7 @@ $tipos_evento = obtenerTiposEvento();
                                             </label>
                                             <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" 
                                                    value="<?php echo htmlspecialchars($form_data['nombre'] ?? ''); ?>" 
-                                                   required placeholder="Ej: Ana García López">
+                                                   required placeholder="Ej: Ana García López" maxlength="30">
                                         </div>
                                     </div>
                                     
@@ -193,7 +246,7 @@ $tipos_evento = obtenerTiposEvento();
                                             </label>
                                             <input type="email" class="form-control form-control-lg" id="correo" name="correo" 
                                                    value="<?php echo htmlspecialchars($form_data['correo'] ?? ''); ?>" 
-                                                   required placeholder="ejemplo@email.com">
+                                                   required placeholder="ejemplo@email.com" maxlength="50">
                                         </div>
                                     </div>
                                     
@@ -221,7 +274,7 @@ $tipos_evento = obtenerTiposEvento();
                                     
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label for="tipo_evento" class="form-label fw-bold text-uppercase small">
+                                            <label for="tipo_evento_id" class="form-label fw-bold text-uppercase small">
                                                 <i class="bi bi-stars text-wedding-gold me-2" style="color: #d4af37; font-size: 1.2rem;"></i> Tipo de evento *
                                             </label>
                                             <select class="form-select form-select-lg" id="tipo_evento_id" name="tipo_evento_id" required>
@@ -247,8 +300,12 @@ $tipos_evento = obtenerTiposEvento();
                                                     if (!empty($tipos)): 
                                                 ?>
                                                     <optgroup label="<?php echo $labels_categorias[$categoria] ?? ucfirst($categoria); ?>">
-                                                        <?php foreach ($tipos as $tipo): ?>
+                                                        <?php foreach ($tipos as $tipo): 
+                                                            // Generar clave para autocompletado JS
+                                                            $clave = generarClave($tipo['nombre']);
+                                                        ?>
                                                             <option value="<?php echo $tipo['id']; ?>" 
+                                                                    data-clave="<?php echo $clave; ?>"
                                                                     <?php echo ($form_data['tipo_evento_id'] ?? '') == $tipo['id'] ? 'selected' : ''; ?>>
                                                                 <?php echo htmlspecialchars($tipo['nombre']); ?>
                                                             </option>
@@ -268,14 +325,14 @@ $tipos_evento = obtenerTiposEvento();
                                                 <i class="bi bi-chat-square-heart-fill text-wedding-gold me-2" style="color: #d4af37; font-size: 1.2rem;"></i> Mensaje adicional
                                             </label>
                                             <textarea class="form-control form-control-lg" id="mensaje" name="mensaje" rows="5" 
-                                                      placeholder="Si no encuentras tu evento en la lista cuéntanos más sobre tus ideas, número de invitados, presupuesto aproximado, ubicación preferida... Nosotros la haremos realidad!!"><?php echo htmlspecialchars($form_data['mensaje'] ?? ''); ?></textarea>
+                                                      placeholder="Si no encuentras tu evento en la lista cuéntanos más sobre tus ideas, número de invitados, presupuesto aproximado $, ubicación preferida... Nosotros la haremos realidad!!"><?php echo htmlspecialchars($form_data['mensaje'] ?? ''); ?></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <div class="text-center mt-5">
                                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                        <button type="submit"class="btn btn-outline-primary btn-lg px-5">
+                                        <button type="submit" class="btn btn-outline-primary btn-lg px-5">
                                             <i class="bi bi-send-heart-fill me-2"></i> Enviar Solicitud
                                         </button>
                                     </div>
@@ -293,7 +350,6 @@ $tipos_evento = obtenerTiposEvento();
             </div>
         </div>
     </section>
-
 
     <!-- Información Adicional -->
     <section class="py-5">
@@ -365,6 +421,9 @@ $tipos_evento = obtenerTiposEvento();
                         <a href="https://www.linkedin.com/in/mar%C3%ADa-cristina-gallo-medina-020328191/?originalSubdomain=mx" class="social-icon bg-primary">
                             <i class="bi bi-linkedin"></i>
                         </a>
+                        <a href="https://api.whatsapp.com/send/?phone=524497698371&text&type=phone_number&app_absent=0" class="social-icon bg-success">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -378,7 +437,7 @@ $tipos_evento = obtenerTiposEvento();
                         </li>
                         <li class="mb-3">
                             <i class="bi bi-telephone me-2"></i>
-                            +52 1 449 769 8371
+                            449 769 8371
                         </li>
                         <li class="mb-3">
                             <i class="bi bi-envelope me-2"></i>
@@ -404,7 +463,7 @@ $tipos_evento = obtenerTiposEvento();
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript Personalizado -->
-    <script src="assets/js/scripts.js"></script>
+    <!-- JavaScript Personalizado (asegúrate de que la ruta sea correcta) -->
+    <script src="assets/js/registro.js"></script>
 </body>
 </html>
