@@ -11,3 +11,6 @@ para version 4.0 beta >> se cambia visualmente el login y se añaden funciones a
 
 
 para version 5.0 delta >> se normalizó la base de datos y se hizo un scheme de bdd , se agregaron imagenes al carrusel conforme a fotos de cristina, se hicieron responsivos los botones solo queda saber que cambios requerira cristina 
+
+
+para version 6.0 omega >> se añadieron imagenes, se añadio nueva tabla de recuperacion contraseñas, se creo un correo para codigo de recuperar contraseñas, se añadio funcion de cambio de contraseña, y cambios visuales menores
