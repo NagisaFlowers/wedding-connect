@@ -1,0 +1,131 @@
+/* ========================================
+   OPCIÓN 1: MINIMALISMO CÁLIDO
+   Paleta: Terracota, Azul Serenity, Dorado
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --terracota: #e5c9b7;
+    --terracota-oscuro: #c9ad99;
+    --azul-serenity: #9bb7d4;
+    --azul-oscuro: #7e9ab7;
+    --dorado: #dbb88c;
+    --dorado-oscuro: #c9a87c;
+    --blanco-hueso: #fef9f2;
+    --texto-oscuro: #4a4040;
+    --texto-claro: #6b5e5e;
+    --sombra-suave: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--texto-oscuro);
+    background: var(--blanco-hueso);
+    padding-top: 80px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    color: var(--terracota-oscuro);
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(254, 249, 242, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--azul-serenity);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: var(--terracota-oscuro) !important;
+}
+
+.navbar-brand i {
+    color: var(--azul-serenity);
+}
+
+.nav-link {
+    color: var(--texto-oscuro) !important;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1.2rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--azul-oscuro) !important;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #4a4040, #3a3535);
+    color: var(--blanco-hueso);
+    padding: 5rem 0 3rem;
+    border-top: 4px solid var(--azul-serenity);
+}
+
+.footer h4, .footer h5 {
+    color: var(--azul-serenity);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer .text-light {
+    color: rgba(255, 249, 242, 0.9) !important;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 10px;
+    background: rgba(155, 183, 212, 0.1);
+    border: 2px solid var(--azul-serenity);
+    color: var(--azul-serenity);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--azul-serenity);
+    color: #4a4040;
+    transform: translateY(-5px);
+}
+
+.footer ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.footer ul li::before {
+    content: '•';
+    color: var(--azul-serenity);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+hr {
+    background: rgba(155, 183, 212, 0.2);
+    margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body { padding-top: 70px; }
+    .navbar-brand { font-size: 2.3rem; }
+}
