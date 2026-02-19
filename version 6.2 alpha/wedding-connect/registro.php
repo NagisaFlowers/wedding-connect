@@ -295,7 +295,7 @@ $tipos_evento = obtenerTiposEvento();
                                                     'xv_anos' => '👸 XV Años',
                                                     'baby_shower' => '🎀 Baby Shower',
                                                     'empresariales' => '🏢 Eventos Empresariales',
-                                                    'municipales' => '🏛️ Eventos Municipales',
+                                                    'municipales' => '🏛️ Eventos Gubernamentales',
                                                     'anuales' => '📅 Eventos del Año',
                                                     'otros' => '🎪 Otros Eventos'
                                                 ];
