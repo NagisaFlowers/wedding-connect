@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- WEDDING CONNECT - Sistema de Event Planner version 6.0
+-- WEDDING CONNECT - Sistema de Event Planner version 6.2
 -- --------------------------------------------------------
 
 -- Crear base de datos si no existe
@@ -14,7 +14,7 @@ CREATE TABLE tipos_evento (
     id INT PRIMARY KEY AUTO_INCREMENT,
     codigo VARCHAR(50) UNIQUE NOT NULL,
     nombre VARCHAR(100) NOT NULL,
-    categoria ENUM('bodas', 'xv_anos', 'baby_shower', 'empresariales', 'municipales', 'anuales', 'otros') NOT NULL,
+    categoria ENUM('bodas', 'xv_anos', 'baby_shower', 'empresariales', 'gubernamentales', 'anuales', 'otros') NOT NULL,
     descripcion TEXT,
     activo BOOLEAN DEFAULT TRUE,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -110,13 +110,13 @@ INSERT INTO tipos_evento (codigo, nombre, categoria) VALUES
 ('team_building', 'Team Building', 'empresariales'),
 ('fiesta_navidad_empresa', 'Fiesta de Navidad Empresarial', 'empresariales'),
 
--- Eventos Municipales
-('evento_municipal', 'Evento Municipal', 'municipales'),
-('feria_local', 'Feria Local', 'municipales'),
-('festival_cultural', 'Festival Cultural', 'municipales'),
-('concierto_publico', 'Concierto Público', 'municipales'),
-('celebracion_aniversario_ciudad', 'Celebración Aniversario Ciudad', 'municipales'),
-('evento_deportivo_municipal', 'Evento Deportivo Municipal', 'municipales'),
+-- Eventos Gubernamentales
+('evento_gubernamental', 'Evento Gubernamental', 'gubernamentales'),
+('feria_local', 'Feria Local', 'gubernamentales'),
+('festival_cultural', 'Festival Cultural', 'gubernamentales'),
+('concierto_publico', 'Concierto Público', 'gubernamentales'),
+('celebracion_aniversario_ciudad', 'Celebración Aniversario Ciudad', 'gubernamentales'),
+('evento_deportivo_gubernamental', 'Evento Deportivo Gubernamental', 'gubernamentales'),
 
 -- Eventos del Año
 ('cumpleanos', 'Cumpleaños', 'anuales'),
@@ -160,7 +160,7 @@ SET @baby_shower_gender_id = (SELECT id FROM tipos_evento WHERE codigo = 'baby_s
 SET @evento_empresarial_id = (SELECT id FROM tipos_evento WHERE codigo = 'evento_empresarial');
 SET @lanzamiento_producto_id = (SELECT id FROM tipos_evento WHERE codigo = 'lanzamiento_producto');
 SET @conferencia_id = (SELECT id FROM tipos_evento WHERE codigo = 'conferencia');
-SET @evento_municipal_id = (SELECT id FROM tipos_evento WHERE codigo = 'evento_municipal');
+SET @evento_gubernamental_id = (SELECT id FROM tipos_evento WHERE codigo = 'evento_gubernamental');
 SET @festival_cultural_id = (SELECT id FROM tipos_evento WHERE codigo = 'festival_cultural');
 SET @cumpleanos_id = (SELECT id FROM tipos_evento WHERE codigo = 'cumpleanos');
 SET @aniversario_id = (SELECT id FROM tipos_evento WHERE codigo = 'aniversario');
