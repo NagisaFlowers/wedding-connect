@@ -257,7 +257,7 @@
                     <!-- Galería de Bodas -->
                     <div class="carousel-item active">
                         <div class="container">
-                            <h3 class="text-center mb-4">Galería de Bodas</h3>
+                            <h3 class="text-center mb-4">Galería de Wedding Planner</h3>
                             <div class="row g-4">
                                 <div class="col-md-3">
                                     <div class="gallery-item">
@@ -452,7 +452,7 @@
                     <!-- Galería de Eventos Municipales -->
                     <div class="carousel-item">
                         <div class="container">
-                            <h3 class="text-center mb-4">Galería de Eventos Municipales</h3>
+                            <h3 class="text-center mb-4">Galería de Eventos Gubernamentales</h3>
                             <div class="row g-4">
                                 <div class="col-md-3">
                                     <div class="gallery-item">
