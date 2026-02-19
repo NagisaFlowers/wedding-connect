@@ -162,7 +162,7 @@
                             <div class="service-icon">
                                 <i class="bi bi-building"></i>
                             </div>
-                            <h4 class="card-title">Eventos Municipales</h4>
+                            <h4 class="card-title">Eventos Gubernamentales</h4>
                             <p class="card-text">Coordinación de eventos institucionales</p>
                             <ul class="list-unstyled text-start">
                                 <li><i class="bi bi-check-circle text-success"></i> Ferias y exposiciones</li>
@@ -568,7 +568,7 @@
                     <h2 class="display-5 fw-bold mb-4">¿Listos para comenzar?</h2>
                     <p class="lead mb-4">Déjanos hacer realidad el evento de tus sueños</p>
                     <a href="registro.php" class="btn btn-light btn-lg px-5">
-                        <i class="bi bi-heart-fill text-danger"></i> Solicitar Cotización Gratuita
+                        <i class="bi bi-heart-fill text-danger"></i> Solicita tu Cotización
                     </a>
                 </div>
             </div>
