@@ -16,4 +16,6 @@ para version 5.0 delta >> se normalizó la base de datos y se hizo un scheme de 
 para version 6.0 omega >> se añadieron imagenes, se añadio nueva tabla de recuperacion contraseñas, se creo un correo para codigo de recuperar contraseñas, se añadio funcion de cambio de contraseña, y cambios visuales menores, validacion de formulario
 
 
-para version 6.1 omega >> solo se cambio diseño y colores lo demas sigue igual ahh se agtego un mapa de ubicacion en el footer xdddd 
+para version 6.1 omega >> solo se cambio diseño y colores lo demas sigue igual ahh se agtego un mapa de ubicacion en el footer
+
+para version 7.0 >> se haran dos propuestas de diseño visual a como cristina lo pidio "colores elegantes y sobrios, tipografia como en el pdf que mando", se añadio galeria de mas fotos y resplado de base de datos
